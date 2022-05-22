@@ -27,7 +27,7 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
   test('[4] the object returned is the exact same one we passed in', () => {
     const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
     const output = utils.trimPropertiesMutation(input)
-    expect(input).toEqual(output);
+    expect(input).toBe(output);
   })
 })
 
@@ -133,4 +133,10 @@ describe('[Exercise 7] isEvenNumberAsync', () => {
   test('[20] resolves false if passed an odd number', () => {
     utils.isEvenNumberAsync(3).then( result => expect(result).toEqual(false));
   })
+})
+
+describe('[Exercise 8] More tests', () => {
+  test('[21] compare empty objects', () => {
+    expect({}).toEqual({});
+  }) 
 })
